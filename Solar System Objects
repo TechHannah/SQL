@@ -53,7 +53,7 @@ HAVING avg_density>3;
 SELECT body, MIN(surface_gravity) AS min_gravity
 FROM solar_system_objects
 GROUP BY body
-HAVING min_gravity<1;
+HAVING min_gravity<2;
 
 SELECT COUNT(*),
 CASE
@@ -63,3 +63,6 @@ ELSE "light"
 END as "weight" FROM solar_system_objects
 GROUP BY "weight";
 
+SELECT body FROM solar_system_objects
+WHERE volume>"100"
+AND shape="round";
