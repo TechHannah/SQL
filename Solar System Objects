@@ -66,3 +66,4 @@ GROUP BY "weight";
 SELECT body FROM solar_system_objects
 WHERE volume>"100"
 AND shape="round";
+
